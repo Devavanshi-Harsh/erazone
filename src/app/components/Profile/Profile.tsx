@@ -1,12 +1,15 @@
 import { NAME, OBJECTIVE } from "@/util/Portfolio";
 import styles from "./Profile.module.scss";
+import profileImage from "/public/images/harsh.png";
+import Image from "next/image";
+
 export function Profile() {
   return (
     <div className={styles.containerBox}>
       <div className={styles.innerContainerBox}>
-        <img
+        <Image
+          src={profileImage}
           alt="Harsh"
-          src="/images/harsh.png"
           className={styles.portfolioImage}
         />
         <div className={styles.textContainer}>
