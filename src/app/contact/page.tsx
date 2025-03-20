@@ -1,5 +1,7 @@
 "use client";
 import { useState } from 'react';
+import styles from './ContactForm.module.scss';
+import Link from 'next/link';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -83,82 +85,94 @@ export default function ContactForm() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
-      <h1>Contact Form</h1>
-      <form onSubmit={handleSubmit}>
-        {/* Keep all your existing form fields (remove ID field) */}
-        <div style={{ marginBottom: '15px' }}>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            style={{ width: '100%', padding: '8px' }}
-          />
+    <div className={styles.container}>
+      <Link href="/" className={styles.homeButton}>
+          &larr; Back to Home
+        </Link>
+      <h1 className={styles.title}>Get in Touch</h1>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>
+            Name
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className={styles.input}
+              placeholder="John Doe"
+              required
+            />
+          </label>
         </div>
 
-        <div style={{ marginBottom: '15px' }}>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            style={{ width: '100%', padding: '8px' }}
-          />
+        <div className={styles.formGroup}>
+          <label className={styles.label}>
+            Email
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className={styles.input}
+              placeholder="john@example.com"
+              required
+            />
+          </label>
         </div>
 
-        <div style={{ marginBottom: '15px' }}>
-          <label>Job Offer:</label>
-          <input
-            type="text"
-            name="jobOffer"
-            value={formData.jobOffer}
-            onChange={handleChange}
-            required
-            style={{ width: '100%', padding: '8px' }}
-          />
+        <div className={styles.formGroup}>
+          <label className={styles.label}>
+            Job Offer
+            <input
+              type="text"
+              name="jobOffer"
+              value={formData.jobOffer}
+              onChange={handleChange}
+              className={styles.input}
+              placeholder="Position you're offering"
+              required
+            />
+          </label>
         </div>
 
-        <div style={{ marginBottom: '15px' }}>
-          <label>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            style={{ width: '100%', padding: '8px', height: '100px' }}
-          />
+        <div className={styles.formGroup}>
+          <label className={styles.label}>
+            Message
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className={`${styles.input} ${styles.textarea}`}
+              placeholder="Your message..."
+              rows={5}
+              required
+            />
+          </label>
         </div>
 
         {submitError && (
-          <div style={{ color: 'red', marginBottom: '15px' }}>
-            Error: {submitError}
+          <div className={styles.errorMessage}>
+            ⚠️ {submitError}
           </div>
         )}
 
         {submitSuccess && (
-          <div style={{ color: 'green', marginBottom: '15px' }}>
-            Message sent successfully!
+          <div className={styles.successMessage}>
+            ✅ Message sent successfully!
           </div>
         )}
 
         <button
           type="submit"
           disabled={isSubmitting}
-          style={{
-            padding: '10px 20px',
-            backgroundColor: isSubmitting ? '#cccccc' : '#0070f3',
-            color: 'white',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: isSubmitting ? 'not-allowed' : 'pointer'
-          }}
+          className={styles.submitButton}
         >
-          {isSubmitting ? 'Submitting...' : 'Submit'}
+          {isSubmitting ? (
+            <div className={styles.spinner} />
+          ) : (
+            'Send Message'
+          )}
         </button>
       </form>
     </div>
