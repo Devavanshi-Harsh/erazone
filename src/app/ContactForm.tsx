@@ -28,6 +28,8 @@ export default function ContactForm() {
       return;
     }
 
+    
+
     setIsSubmitting(true);
     setSubmitError("");
 
