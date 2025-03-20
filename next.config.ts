@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export', // Enable static export
-  basePath: process.env.NODE_ENV === 'production' ? '/erazone' : '', // Replace with your repo name
+  output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/erazone' : '',
   images: {
-    unoptimized: true, // Disable image optimization for static export
+    unoptimized: true,
   },
+  trailingSlash: true,
+  distDir: 'out',
 };
 
 export default nextConfig;
