@@ -115,3 +115,9 @@ export const SHORT_INTRO =
   "Passionate about building high-performance web applications with Java, Spring Boot, and React.js. I thrive on solving complex problems and optimizing backend systems.";
 export const CALL_TO_ACTION = "Let's build something amazing together!";
 export const RESUME_LINK = "/assets/Harsh_Devavanshi_Resume.pdf"; // Path to downloadable resume
+
+export const words = [
+  "Full Stack Developer",
+  "Backend Developer | Java Developer",
+  "Frontend Developer | React Developer",
+];

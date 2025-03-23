@@ -24,7 +24,6 @@
         max-width: 600px;
         padding: 1rem;
         .imText{
-            display: block;
             margin-bottom: -0.25rem;
         }
         .name {
@@ -53,7 +52,13 @@
     }
   }
 
-
+.typingEffectTxt{
+  margin-left: 5px;
+  font-size: 3vh;
+  color: #F4CE14;
+  display: inline;
+  font-weight: bolder;
+}
 
 
 // rgb(245, 247, 248)
