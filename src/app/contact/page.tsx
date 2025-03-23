@@ -42,11 +42,11 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
           'api-key': 'OMpqVWAH.UC80wyXTtPwhDgAUdCTx6'
         },
-        body: JSON.stringify([{
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           message: `Job Offer: ${formData.jobOffer}\nMessage: ${formData.message}`
-        }])
+        })
       });
 
       if (!response.ok) {
