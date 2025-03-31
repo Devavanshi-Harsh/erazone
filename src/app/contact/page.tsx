@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import styles from './ContactForm.module.scss';
-import Link from 'next/link';
+import Navbar from '../components/Navbar/Navbar';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -85,10 +85,9 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={styles.container}>
-      <Link href="/" className={styles.homeButton}>
-          &larr; Back to Home
-        </Link>
+    <div>
+      <Navbar/>
+      <div className={styles.container}>
       <h1 className={styles.title}>Get in Touch</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formGroup}>
@@ -175,6 +174,7 @@ export default function ContactForm() {
           )}
         </button>
       </form>
+    </div>
     </div>
   );
 }
