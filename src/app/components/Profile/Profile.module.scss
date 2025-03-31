@@ -3,12 +3,17 @@
 .containerBox {
     --primary-font: "Bitter", serif;
     --accent-font: "Itim", cursive;
-    --text-color: #F5F7F8;
+    --text-color: rgb(69, 71, 75);
   
     max-width: 90%;
-    margin: 6rem auto;
+    margin: 10rem auto;
     padding: 1rem;
-  
+    background-color: #F5F7F8;
+    width: 65vw;
+    @media (max-width: 768px) {
+      margin: 4rem auto;
+      width: 85vw;
+    }
     .innerContainerBox {
       display: flex;
       flex-wrap: wrap;
@@ -43,11 +48,12 @@
       }
   
       .portfolioImage {
-        width: 100%;
+        width: 200px;
         max-width: 300px;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        height: 200px;
+      object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
       }
     }
   }
