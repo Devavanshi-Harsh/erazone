@@ -101,7 +101,6 @@ const Skills = () => {
     <div>
       <Navbar />
       <section className={styles.skillsSection}>
-        <h2 className={styles.title}>Tech Stack</h2>
         <div className={styles.skillsGrid}>
           {skills.map((skill, index) => (
             <div key={index} className={styles.skillCard}>
