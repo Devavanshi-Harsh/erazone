@@ -1,0 +1,184 @@
+// Portfolio.module.scss
+@use 'sass:map';
+
+$colors: (
+  "light": #F5F7F8,
+  "accent": #F4CE14,
+  "primary": #495E57,
+  "dark": #45474B
+);
+
+.portfolio {
+  padding: 4rem 0;
+  background-color: map.get($colors, "light");
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  color: map.get($colors, "dark");
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: map.get($colors, "accent");
+    margin: 1rem auto;
+  }
+}
+
+.sectionSubtitle {
+  color: rgba(map.get($colors, "dark"), 0.8);
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.projectCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+  }
+
+  &.reverse {
+    @media (min-width: 768px) {
+      direction: rtl;
+      
+      > * {
+        direction: ltr;
+      }
+    }
+  }
+}
+
+.projectImage {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  }
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.techTag {
+  background: rgba(map.get($colors, "primary"), 0.1);
+  color: map.get($colors, "primary");
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.projectTitle {
+  color: map.get($colors, "dark");
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.projectStats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: map.get($colors, "primary");
+  
+  svg {
+    font-size: 1.2rem;
+  }
+}
+
+.projectDescription {
+  color: rgba(map.get($colors, "dark"), 0.85);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: map.get($colors, "accent");
+  color: map.get($colors, "dark");
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.skillsMatrix {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.matrixTitle {
+  color: map.get($colors, "dark");
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.matrixGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.matrixItem {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(map.get($colors, "primary"), 0.05);
+  border-radius: 8px;
+}
+
+.metric {
+  display: block;
+  color: map.get($colors, "primary");
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.metricLabel {
+  color: rgba(map.get($colors, "dark"), 0.8);
+  font-size: 0.95rem;
+}
