@@ -1,0 +1,86 @@
+// Footer.module.scss
+@use 'sass:map';
+
+$colors: (
+  "light": #F5F7F8,
+  "accent": #F4CE14,
+  "primary": #495E57,
+  "dark": #45474B
+);
+
+.footer {
+  width: 100%;
+  background-color: map.get($colors, "dark");
+  border-top: 3px solid map.get($colors, "accent");
+  margin-top: auto;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .title {
+    color: map.get($colors, "light");
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .contactItem {
+    display: flex;
+  }
+
+  .icon {
+    color: map.get($colors, "accent");
+    font-size: 1.2rem;
+    min-width: 24px;
+    margin-right: 1rem;
+  }
+
+  .link {
+    color: map.get($colors, "light");
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    &:hover {
+      color: map.get($colors, "accent");
+      text-decoration: underline;
+    }
+  }
+
+  .legalSection {
+    border-top: 1px solid rgba(map.get($colors, "light"), 0.15);
+    padding-top: 2rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      border-top: 0;
+      padding-top: 3rem;
+      text-align: right;
+    }
+  }
+
+  .copyright {
+    color: rgba(map.get($colors, "light"), 0.8);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
