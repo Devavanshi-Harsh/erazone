@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Skills', path: '/skills' },
     { name: 'Contact', path: '/contact' },
+    {name:'Reviews', path:'/reviews'}
   ];
 
   return (
