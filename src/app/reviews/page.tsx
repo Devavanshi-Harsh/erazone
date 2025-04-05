@@ -5,7 +5,7 @@ import styles from "./Recommendations.module.scss";
 import Navbar from "../components/Navbar/Navbar";
 
 const RecommendationsGallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const recommendations = Array.from({ length: 13 }, (_, i) => ({
     id: i + 1,
