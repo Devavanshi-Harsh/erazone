@@ -24,7 +24,6 @@ import {
   SiPostman,
 } from "react-icons/si";
 import styles from "./skills.module.scss";
-import Navbar from "../components/Navbar/Navbar";
 
 const Skills = () => {
   const skills = [
@@ -99,8 +98,9 @@ const Skills = () => {
 
   return (
     <div>
-      <Navbar />
       <section className={styles.skillsSection}>
+      <h2 className={styles.sectionTitle}>Tech Stacks</h2>
+      <p className={styles.sectionSubtitle}>Over 14+ high demand skills exposure</p>
         <div className={styles.skillsGrid}>
           {skills.map((skill, index) => (
             <div key={index} className={styles.skillCard}>

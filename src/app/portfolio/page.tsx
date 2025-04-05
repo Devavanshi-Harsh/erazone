@@ -1,12 +1,10 @@
 // Portfolio.jsx
 import { FiGithub, FiExternalLink, FiDatabase, FiCode, FiSmartphone } from 'react-icons/fi';
 import styles from './Portfolio.module.scss';
-import Navbar from '../components/Navbar/Navbar';
 
 const Portfolio = () => {
   return (
     <div>
-        <Navbar />
         <section className={styles.portfolio} id="portfolio">
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Engineering Excellence</h2>

@@ -1,7 +1,6 @@
 "use client";
 import { useState } from 'react';
 import styles from './ContactForm.module.scss';
-import Navbar from '../components/Navbar/Navbar';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -86,7 +85,6 @@ export default function ContactForm() {
 
   return (
     <div>
-      <Navbar/>
       <div className={styles.container}>
       <h1 className={styles.title}>Get in Touch</h1>
       <form onSubmit={handleSubmit} className={styles.form}>

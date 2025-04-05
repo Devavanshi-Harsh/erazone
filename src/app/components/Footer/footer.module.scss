@@ -13,6 +13,7 @@ $colors: (
   background-color: map.get($colors, "dark");
   border-top: 3px solid map.get($colors, "accent");
   margin-top: auto;
+  height: 17vh;
 
   .container {
     max-width: 1200px;
@@ -54,7 +55,7 @@ $colors: (
     color: map.get($colors, "accent");
     font-size: 1.2rem;
     min-width: 24px;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
 
   .link {
@@ -62,6 +63,7 @@ $colors: (
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
     &:hover {
       color: map.get($colors, "accent");
       text-decoration: underline;

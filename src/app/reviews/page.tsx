@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./Recommendations.module.scss";
-import Navbar from "../components/Navbar/Navbar";
 import { basePath } from "../util/helper";
 
 const RecommendationsGallery = () => {
@@ -15,7 +14,6 @@ const RecommendationsGallery = () => {
 
   return (
     <div>
-      <Navbar />
       <section className={styles.section}>
         <div className={styles.header}>
           <h2 className={styles.title}>Professional Endorsements</h2>
