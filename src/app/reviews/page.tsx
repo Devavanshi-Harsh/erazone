@@ -3,13 +3,14 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./Recommendations.module.scss";
 import Navbar from "../components/Navbar/Navbar";
+import { basePath } from "../util/helper";
 
 const RecommendationsGallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const recommendations = Array.from({ length: 13 }, (_, i) => ({
     id: i + 1,
-    src: `/images/recommendations/pr${i + 1}.jpg`,
+    src: `${basePath}/images/recommendations/pr${i + 1}.jpg`,
   }));
 
   return (

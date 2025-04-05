@@ -2,13 +2,14 @@ import { NAME, OBJECTIVE } from "@/util/Portfolio";
 import styles from "./Profile.module.scss";
 import Image from "next/image";
 import TypingEffect from "./TypingEffect";
+import { basePath } from "@/app/util/helper";
 
 export function Profile() {
   return (
     <div className={styles.containerBox}>
       <div className={styles.innerContainerBox}>
         <Image
-          src={"/images/harsh.png"}
+          src={`${basePath}/images/harsh.png`}
           alt="Harsh"
           className={styles.portfolioImage}
           width={200}
