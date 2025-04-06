@@ -5,7 +5,6 @@ import {
   FiPhone,
   FiLinkedin,
   FiGithub,
-  FiInstagram,
 } from "react-icons/fi"; // Use react-icons for professionalism
 import { CiLocationOn } from "react-icons/ci";
 
@@ -61,17 +60,6 @@ const Footer = () => {
                 >
                   <FiGithub className={styles.icon} />
                   /Devavanshi-Harsh
-                </a>
-              </div>
-              <div className={styles.contactItem}>
-                <a
-                  href="https://www.instagram.com/harsh_uncensored_/"
-                  className={styles.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FiInstagram className={styles.icon} />
-                  harsh_uncensored_
                 </a>
               </div>
             </address>
