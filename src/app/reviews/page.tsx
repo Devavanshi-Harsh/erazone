@@ -32,7 +32,6 @@ const RecommendationsGallery = () => {
                   src={rec.src}
                   alt={`Recommendation from connection ${rec.id}`}
                   fill
-                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className={styles.image}
                   quality={80}
                 />
