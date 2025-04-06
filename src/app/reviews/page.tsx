@@ -20,7 +20,7 @@ const RecommendationsGallery = () => {
           <p className={styles.subtitle}>Peer-Validated Technical Expertise</p>
         </div>
 
-        <div className={styles.galleryGrid}>
+        <div className={styles.galleryContainer}>
           {recommendations.map((rec) => (
             <div
               key={rec.id}
