@@ -11,6 +11,7 @@ import {
 } from "react-icons/fi";
 import styles from "./Portfolio.module.scss";
 import { basePath } from "../util/helper";
+import { AiFillShop } from "react-icons/ai";
 
 const Portfolio = () => {
   type CaseStudyType = "autozone" | "transunion" | null;
@@ -71,6 +72,9 @@ const Portfolio = () => {
             <span className={styles.techTag}>Java 11</span>
             <span className={styles.techTag}>React.js</span>
             <span className={styles.techTag}>Oracle DB</span>
+            <img src={`${basePath}/logos/pcf.png`} alt="Pivotal Cloud Foundry" style={{ width: 'auto', height: '20px' }} />
+            <img src={`${basePath}/logos/dynatrace.png`} alt="dynatrace" style={{ width: 'auto', height: '20px' }} />
+            
           </div>
         </>
       ),
@@ -92,10 +96,12 @@ const Portfolio = () => {
               <div className={styles.techStack}>
                 <span className={styles.techTag}>Java</span>
                 <span className={styles.techTag}>Spring Boot</span>
-                <span className={styles.techTag}>React Native</span>
+                {/* <span className={styles.techTag}>JavaScript</span> */}
                 <span className={styles.techTag}>TypeScript</span>
+                <span className={styles.techTag}>React Js</span>
+                <span className={styles.techTag}>React Native</span>
                 <span className={styles.techTag}>ELK Stack</span>
-                <span className={styles.techTag}>AWS</span>
+                <span className={styles.techTag}>GCP</span>
               </div>
               <h3 className={styles.projectTitle}>
                 AutoZone Commercial Ecosystem
@@ -103,11 +109,15 @@ const Portfolio = () => {
               <div className={styles.projectStats}>
                 <div className={styles.statItem}>
                   <FiDatabase className={styles.statIcon} />
-                  <span>2M+ SKUs Managed</span>
+                  <span>21k+ SKUs Managed</span>
                 </div>
                 <div className={styles.statItem}>
                   <FiUsers className={styles.statIcon} />
                   <span>7k+ Stores Supported</span>
+                </div>
+                <div className={styles.statItem}>
+                  <AiFillShop className={styles.statIcon} />
+                  <span>100+ Mega Hub Managed</span>
                 </div>
               </div>
               <p className={styles.projectDescription}>
