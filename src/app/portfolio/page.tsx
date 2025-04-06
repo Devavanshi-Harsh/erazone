@@ -1,11 +1,19 @@
 // Portfolio.jsx
-'use client'
-import { useState } from 'react';
-import { FiGithub, FiExternalLink, FiDatabase, FiCode, FiSmartphone, FiUsers } from 'react-icons/fi';
-import styles from './Portfolio.module.scss';
+"use client";
+import { useState } from "react";
+import {
+  FiGithub,
+  FiExternalLink,
+  FiDatabase,
+  FiCode,
+  FiSmartphone,
+  FiUsers,
+} from "react-icons/fi";
+import styles from "./Portfolio.module.scss";
+import { basePath } from "../util/helper";
 
 const Portfolio = () => {
-  type CaseStudyType = 'autozone' | 'transunion' | null;
+  type CaseStudyType = "autozone" | "transunion" | null;
   const [activeCaseStudy, setActiveCaseStudy] = useState<CaseStudyType>(null);
 
   const showCaseStudy = (study: CaseStudyType) => {
@@ -18,11 +26,23 @@ const Portfolio = () => {
       content: (
         <>
           <h3>Enterprise Automotive Management Systems</h3>
-          <p>Developed full-stack solutions for AutoZone&apos;s commercial division serving 7,000+ stores:</p>
+          <p>
+            Developed full-stack solutions for AutoZone&apos;s commercial
+            division serving 7,000+ stores:
+          </p>
           <ul>
-            <li>Led development of consignment program system increasing product visibility by 40%</li>
-            <li>Optimized parts picking algorithms reducing warehouse retrieval time by 25%</li>
-            <li>Integrated Elasticsearch for real-time inventory tracking across 2M+ SKUs</li>
+            <li>
+              Led development of consignment program system increasing product
+              visibility by 40%
+            </li>
+            <li>
+              Optimized parts picking algorithms reducing warehouse retrieval
+              time by 25%
+            </li>
+            <li>
+              Integrated Elasticsearch for real-time inventory tracking across
+              2M+ SKUs
+            </li>
             <li>Implemented JWT-based auth service handling 50k+ RPM</li>
           </ul>
           <div className={styles.techStack}>
@@ -31,14 +51,16 @@ const Portfolio = () => {
             <span className={styles.techTag}>AWS Infrastructure</span>
           </div>
         </>
-      )
+      ),
     },
     transunion: {
       title: "TransUnion Credit Analytics Platform",
       content: (
         <>
           <h3>Financial Risk Assessment System</h3>
-          <p>Key contributions to credit reporting system serving 500k+ users:</p>
+          <p>
+            Key contributions to credit reporting system serving 500k+ users:
+          </p>
           <ul>
             <li>Developed core algorithms for credit score calculation</li>
             <li>Implemented PCI-DSS compliant OAuth2 security layer</li>
@@ -51,8 +73,8 @@ const Portfolio = () => {
             <span className={styles.techTag}>Oracle DB</span>
           </div>
         </>
-      )
-    }
+      ),
+    },
   };
 
   return (
@@ -60,7 +82,9 @@ const Portfolio = () => {
       <section className={styles.portfolio} id="portfolio">
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Enterprise Solutions</h2>
-          <p className={styles.sectionSubtitle}>4.5 years delivering mission-critical systems</p>
+          <p className={styles.sectionSubtitle}>
+            4.5 years delivering mission-critical systems
+          </p>
 
           {/* AutoZone Case Study */}
           <div className={styles.projectCard}>
@@ -73,7 +97,9 @@ const Portfolio = () => {
                 <span className={styles.techTag}>ELK Stack</span>
                 <span className={styles.techTag}>AWS</span>
               </div>
-              <h3 className={styles.projectTitle}>AutoZone Commercial Ecosystem</h3>
+              <h3 className={styles.projectTitle}>
+                AutoZone Commercial Ecosystem
+              </h3>
               <div className={styles.projectStats}>
                 <div className={styles.statItem}>
                   <FiDatabase className={styles.statIcon} />
@@ -85,7 +111,8 @@ const Portfolio = () => {
                 </div>
               </div>
               <p className={styles.projectDescription}>
-                Architected enterprise solutions for North America&apos;s largest auto parts retailer:
+                Architected enterprise solutions for North America&apos;s
+                largest auto parts retailer:
               </p>
               <ul className={styles.projectHighlights}>
                 <li>Consignment program management system</li>
@@ -93,16 +120,19 @@ const Portfolio = () => {
                 <li>Commercial driver returns mobile app</li>
               </ul>
               <div className={styles.projectLinks}>
-                <button 
+                <button
                   className={styles.linkButton}
-                  onClick={() => showCaseStudy('autozone')}
+                  onClick={() => showCaseStudy("autozone")}
                 >
                   Case Details <FiExternalLink />
                 </button>
               </div>
             </div>
             <div className={styles.projectImage}>
-              <img src="http://www.allglassglobal.com/wp-content/uploads/2014/06/commercial_autozone_earlimart_3.jpg" alt="Commercial Ecosystem Architecture" />
+              <img
+                src={`${basePath}/images/AutoZone.jpg`}
+                alt="Commercial Ecosystem Architecture"
+              />
             </div>
           </div>
 
@@ -117,7 +147,9 @@ const Portfolio = () => {
                 <span className={styles.techTag}>Oracle</span>
                 <span className={styles.techTag}>Jenkins</span>
               </div>
-              <h3 className={styles.projectTitle}>TransUnion Credit Intelligence</h3>
+              <h3 className={styles.projectTitle}>
+                TransUnion Credit Intelligence
+              </h3>
               <div className={styles.projectStats}>
                 <div className={styles.statItem}>
                   <FiSmartphone className={styles.statIcon} />
@@ -137,26 +169,35 @@ const Portfolio = () => {
                 <li>Automated fraud detection system</li>
               </ul>
               <div className={styles.projectLinks}>
-                <button 
+                <button
                   className={styles.linkButton}
-                  onClick={() => showCaseStudy('transunion')}
+                  onClick={() => showCaseStudy("transunion")}
                 >
                   Implementation Details <FiGithub />
                 </button>
               </div>
             </div>
             <div className={styles.projectImage}>
-              <img src="https://cubicleninjas.com/wp-content/uploads/2019/07/TransUnion-Frame-12.jpg" alt="Credit Analytics Dashboard" />
+              <img
+                src="https://cubicleninjas.com/wp-content/uploads/2019/07/TransUnion-Frame-12.jpg"
+                alt="Credit Analytics Dashboard"
+              />
             </div>
           </div>
 
           {/* Case Study Modal */}
           {activeCaseStudy && (
-            <div className={styles.modalOverlay} onClick={() => setActiveCaseStudy(null)}>
-              <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <div
+              className={styles.modalOverlay}
+              onClick={() => setActiveCaseStudy(null)}
+            >
+              <div
+                className={styles.modalContent}
+                onClick={(e) => e.stopPropagation()}
+              >
                 <h3>{caseStudies[activeCaseStudy].title}</h3>
                 {caseStudies[activeCaseStudy].content}
-                <button 
+                <button
                   className={styles.closeButton}
                   onClick={() => setActiveCaseStudy(null)}
                 >
