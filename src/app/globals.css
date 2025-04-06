@@ -16,3 +16,13 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Main content will grow to fill available space */
+main {
+  flex: 1 0 auto;
+}
