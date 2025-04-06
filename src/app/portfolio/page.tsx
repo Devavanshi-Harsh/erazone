@@ -16,7 +16,9 @@ const Portfolio = () => {
             <div className={styles.techStack}>
               <span className={styles.techTag}>Java</span>
               <span className={styles.techTag}>Spring Boot</span>
+              <span className={styles.techTag}>TypeScript</span>
               <span className={styles.techTag}>React</span>
+              <span className={styles.techTag}>React Native</span>
               <span className={styles.techTag}>Elasticsearch</span>
             </div>
             <h3 className={styles.projectTitle}>AutoZone Inventory Management System</h3>
@@ -48,7 +50,7 @@ const Portfolio = () => {
           </div>
           <div className={styles.projectImage}>
             {/* Add your screenshot path */}
-            <img src="/autozone-architecture.png" alt="System Architecture" />
+            <img src="https://www.reuters.com/resizer/v2/ARK4XDMDMJIXBGJCWKG4SUEWHM.jpg?auth=fecf6e1bada9005192693ffcd97d61360a7b15279386e5ed5a14de182da68f12&width=1200&quality=80" alt="System Architecture" />
           </div>
         </div>
 
@@ -57,8 +59,10 @@ const Portfolio = () => {
           <div className={styles.projectContent}>
             <div className={styles.techStack}>
               <span className={styles.techTag}>Core Java</span>
+              <span className={styles.techTag}>Spring Framework</span>
               <span className={styles.techTag}>REST APIs</span>
-              <span className={styles.techTag}>React Native</span>
+              <span className={styles.techTag}>JavaScript</span>
+              <span className={styles.techTag}>React Js</span>
               <span className={styles.techTag}>JUnit</span>
             </div>
             <h3 className={styles.projectTitle}>TransUnion Credit Analytics Platform</h3>
@@ -89,7 +93,7 @@ const Portfolio = () => {
             </div>
           </div>
           <div className={styles.projectImage}>
-            <img src="/transunion-mobile.png" alt="Mobile App Preview" />
+            <img src="https://cubicleninjas.com/wp-content/uploads/2019/07/TransUnion-Frame-12.jpg" alt="Decision Edge TransUnion" />
           </div>
         </div>
 
