@@ -5,9 +5,10 @@ import { FiGithub, FiExternalLink, FiDatabase, FiCode, FiSmartphone, FiUsers } f
 import styles from './Portfolio.module.scss';
 
 const Portfolio = () => {
-  const [activeCaseStudy, setActiveCaseStudy] = useState(null);
+  type CaseStudyType = 'autozone' | 'transunion' | null;
+  const [activeCaseStudy, setActiveCaseStudy] = useState<CaseStudyType>(null);
 
-  const showCaseStudy = (study) => {
+  const showCaseStudy = (study: CaseStudyType) => {
     setActiveCaseStudy(study);
   };
 
@@ -17,7 +18,7 @@ const Portfolio = () => {
       content: (
         <>
           <h3>Enterprise Automotive Management Systems</h3>
-          <p>Developed full-stack solutions for AutoZone's commercial division serving 7,000+ stores:</p>
+          <p>Developed full-stack solutions for AutoZone&apos;s commercial division serving 7,000+ stores:</p>
           <ul>
             <li>Led development of consignment program system increasing product visibility by 40%</li>
             <li>Optimized parts picking algorithms reducing warehouse retrieval time by 25%</li>
@@ -84,7 +85,7 @@ const Portfolio = () => {
                 </div>
               </div>
               <p className={styles.projectDescription}>
-                Architected enterprise solutions for North America's largest auto parts retailer:
+                Architected enterprise solutions for North America&apos;s largest auto parts retailer:
               </p>
               <ul className={styles.projectHighlights}>
                 <li>Consignment program management system</li>
