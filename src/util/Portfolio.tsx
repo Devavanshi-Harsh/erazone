@@ -4,9 +4,6 @@ export const PHONE = "+91 8178396703";
 export const EMAIL = "hdevavan@gmail.com";
 export const LINKEDIN = "https://linkedin.com/in/hdevavan";
 
-export const OBJECTIVE =
-  "I build websites and apps from start to finish. I handle the behind-the-scenes logic (with Java) and the user-friendly interfaces you see on screen (with React). Whether it’s creating fast, reliable systems or designing intuitive features, I love solving problems that make apps work better and look great. Let’s chat about how I can help your team turn ideas into reality!";
-
 export const SKILLS = {
   backend: [
     "Java",
