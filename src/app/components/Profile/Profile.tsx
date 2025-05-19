@@ -1,4 +1,4 @@
-import { NAME, OBJECTIVE } from "@/util/Portfolio";
+import { NAME } from "@/util/Portfolio";
 import styles from "./Profile.module.scss";
 import Image from "next/image";
 import TypingEffect from "./TypingEffect";
