@@ -1,6 +1,6 @@
 {
   "name": "erazone",
-  "homepage": "https://Devavanshi-Harsh.github.io/erazone",
+  "homepage": "https://developerharsh.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "build": "next build",
-    "export": "next export",
-    "predeploy": "npm run build && npm run export",
+    "predeploy": "npm run build && touch out/.nojekyll && cp CNAME out/",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
