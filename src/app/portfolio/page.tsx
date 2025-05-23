@@ -10,7 +10,6 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import styles from "./Portfolio.module.scss";
-import { basePath } from "../util/helper";
 import { AiFillShop } from "react-icons/ai";
 
 const Portfolio = () => {
@@ -72,8 +71,8 @@ const Portfolio = () => {
             <span className={styles.techTag}>Java 11</span>
             <span className={styles.techTag}>React.js</span>
             <span className={styles.techTag}>Oracle DB</span>
-            <img src={`${basePath}/logos/pcf.png`} alt="Pivotal Cloud Foundry" style={{ width: 'auto', height: '20px' }} />
-            <img src={`${basePath}/logos/dynatrace.png`} alt="dynatrace" style={{ width: 'auto', height: '20px' }} />
+            <img src={`/logos/pcf.png`} alt="Pivotal Cloud Foundry" style={{ width: 'auto', height: '20px' }} />
+            <img src={`/logos/dynatrace.png`} alt="dynatrace" style={{ width: 'auto', height: '20px' }} />
             
           </div>
         </>
@@ -140,7 +139,7 @@ const Portfolio = () => {
             </div>
             <div className={styles.projectImage}>
               <img
-                src={`${basePath}/images/AutoZone.jpg`}
+                src={`/images/AutoZone.jpg`}
                 alt="Commercial Ecosystem Architecture"
               />
             </div>
